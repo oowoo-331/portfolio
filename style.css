@@ -1,0 +1,148 @@
+/* =========================================================
+   个人主页样式
+   ---------------------------------------------------------
+   想改外观，改下面【配色变量】就够了，不用动后面的代码
+   ========================================================= */
+
+/* ===== 配色变量：改这里 ===== */
+:root {
+  --bg: #ffffff;          /* 页面背景 */
+  --text: #1a1a1a;        /* 正文文字 */
+  --muted: #6b7280;       /* 次要文字（灰色） */
+  --accent: #4f46e5;      /* 主色：按钮、链接  ← 想换风格改这个 */
+  --accent-soft: #eef2ff; /* 主色的浅版：标签背景 */
+  --border: #e5e7eb;      /* 边框 */
+  --card: #fafafa;        /* 卡片背景 */
+}
+
+/* ===== 全局 ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  /* 中文字体放前面，不然中文会丑 */
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.75;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 内容居中，两侧留白 */
+main, .hero-inner, footer > p {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== 头部 ===== */
+.hero {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--accent);
+  background: transparent;
+}
+.btn:hover { text-decoration: none; background: rgba(79, 70, 229, 0.06); }
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn.primary:hover { background: #4338ca; color: #fff; }
+
+/* ===== 区块 ===== */
+section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); font-size: 14px; }
+
+/* ===== 技能标签 ===== */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags.small { margin: 14px 0; }
+
+.tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+/* ===== 项目卡片 ===== */
+.cards {
+  display: grid;
+  /* 自动换行：屏幕宽就两列，手机上一列 */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card.placeholder { border-style: dashed; color: var(--muted); }
+.card.placeholder h3 { color: var(--muted); }
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.card h3 { margin: 0; font-size: 17px; font-weight: 600; }
+
+.badge { color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+.card-desc {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.card-link { font-size: 14px; font-weight: 500; }
+
+/* ===== 页脚 ===== */
+footer { padding: 32px 0; }
+footer p { color: var(--muted); font-size: 13px; text-align: center; margin: 0; }
+
+/* ===== 手机适配 ===== */
+@media (max-width: 600px) {
+  .hero { padding: 48px 0; }
+  .hero h1 { font-size: 28px; }
+  section { padding: 40px 0; }
+}

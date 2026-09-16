@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>霓虹贪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>霓虹贪吃蛇</h1>
+      <div class="hud">
+        <div class="stat"><span class="label">分数</span><b id="score">0</b></div>
+        <div class="stat"><span class="label">最高</span><b id="best">0</b></div>
+        <div class="stat"><span class="label">速度</span><b id="speed">1.0x</b></div>
+      </div>
+    </header>
+
+    <div class="stage">
+      <canvas id="board" width="480" height="480"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="panel">
+          <h2 id="ov-title">准备开始</h2>
+          <p id="ov-text">方向键 / WASD 控制，空格暂停</p>
+          <button id="ov-btn">开始游戏</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button id="btn-restart">重开 (R)</button>
+      <button id="btn-pause">暂停 (空格)</button>
+      <label class="switch"><input type="checkbox" id="chk-wall" checked> 穿墙模式</label>
+      <label class="switch"><input type="checkbox" id="chk-sound" checked> 音效</label>
+    </div>
+
+    <p class="hint">手机上直接滑动屏幕就能控制方向</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

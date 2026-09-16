@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOWOO · 个人主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 1. 头部：第一眼看到的东西 ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <!-- TODO: 把「你的名字」改成你自己的名字或网名 -->
+      <h1>OOWOO</h1>
+
+      <!-- TODO: 一句话介绍自己。公式：身份 + 正在做什么 + 想找什么 -->
+      <p class="tagline">软件工程专业大一学生 · 正在用 AI 从零做项目 · 想找一起写代码的伙伴</p>
+
+      <div class="hero-btns">
+        <a class="btn primary" href="#projects">看看我的项目</a>
+        <!-- TODO: 把 href 改成你的 GitHub 主页地址，比如 https://github.com/yourname -->
+        <a class="btn" href="https://github.com/oowoo-331" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 2. 关于我 ===== -->
+    <section id="about">
+      <h2>关于我</h2>
+      <!-- TODO: 改成你自己的话。三段式最好用：现在在做什么 / 怎么学 / 想做什么 -->
+      <p>
+        我是一名软件工程专业 2026 级学生，从零开始学编程。
+        目前在学习前端（HTML / CSS / JavaScript），习惯把做过的东西都放在这个页面上。
+      </p>
+      <p>
+        我的学习方法是：先做一个能跑的最小版本，再一点点改复杂。
+      </p>
+    </section>
+
+    <!-- ===== 3. 技能标签 ===== -->
+    <section id="skills">
+      <h2>会什么</h2>
+      <div class="tags">
+        <!-- TODO: 换成你真实会的。会一点就写「xx（学习中）」，别装 -->
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript（学习中）</span>
+        <span class="tag">Python（学习中）</span>
+        <span class="tag">Git（学习中）</span>
+      </div>
+    </section>
+
+    <!-- ===== 4. 项目卡片 ===== -->
+    <section id="projects">
+      <h2>做过的东西</h2>
+      <div class="cards">
+
+        <!-- 项目卡片：复制这个 <article> 就能加新项目 -->
+        <article class="card">
+          <div class="card-head">
+            <h3>霓虹贪吃蛇</h3>
+            <span class="badge">2026-09</span>
+          </div>
+          <p class="card-desc">
+            用原生 JavaScript 写的贪吃蛇。包含游戏循环、碰撞检测、输入队列、
+            本地最高分，支持键盘和手机滑动。没有用任何框架和第三方库。
+          </p>
+          <div class="tags small">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <!-- 链接指向同仓库里的 snake-game 文件夹 -->
+          <a class="card-link" href="./snake-game/index.html" target="_blank" rel="noopener">打开游戏 →</a>
+        </article>
+
+        <!-- TODO: 做完下一个项目后，复制上面整块 <article>，改内容即可 -->
+        <article class="card placeholder">
+          <div class="card-head">
+            <h3>下一个项目</h3>
+            <span class="badge">待填</span>
+          </div>
+          <p class="card-desc">
+            这里留给你的第二个作品。做完之后，复制上一张卡片的写法，把标题、
+            描述、技术标签和链接改掉就行。
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== 5. 联系 ===== -->
+    <section id="contact">
+      <h2>找我</h2>
+      <p>
+        <!-- TODO: 换成你的邮箱 -->
+        邮箱：<a href="mailto:your@email.com">lky779339@outlook.com</a>
+      </p>
+      <p class="muted">有任何想一起做的东西，欢迎直接找我。</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- TODO: 改成你的名字和年份 -->
+    <p>© 2026 oowoo-331 · 这个页面由我自己编写和托管</p>
+  </footer>
+
+</body>
+</html>
